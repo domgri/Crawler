@@ -48,9 +48,9 @@
 </html>
 
 <script>
-
-var countDownDate = new Date("Feb 22, 2019 13:15:10");
+var countDownDate = new Date("Feb 22, 2019 12:00:00");
 var now = new Date();
+
 
 function properDate() {
   while(now.getTime() - countDownDate.getTime() > 0)
@@ -60,6 +60,7 @@ function properDate() {
 }
 
 var x = setInterval(function() {
+  var now = new Date().getTime();
   var distance = countDownDate - now;
 
   var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
